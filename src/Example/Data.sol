@@ -13,14 +13,20 @@ contract Example {
 //integers
     int32 z;
 //bool
-    // bool myCondition;
-    constructor(bool myCondition) {
-        if (myCondition == true) {
-            console.log('error with bool');
-        }
-    }
+    bool myCondition;
 
     //enums
-      enum names {first, second, third, fourth}
+      enum Names {first, second, other}
   
+  constructor(Names name){
+    if (name == Names.first) {
+        console.log('first name');
+    }
+    if (name == Names.other) {
+        console.log('Other name');
+    }
+    if (name == Names.second) {
+        console.log('second name');
+    }
+  }
 }

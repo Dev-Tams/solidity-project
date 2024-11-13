@@ -9,7 +9,7 @@ contract ExampleTest is Test{
     Example public example;
 
 function setUp() public {
-        example = new Example(true);
+        example = new Example(Example.Names.first);
     }
 function testExample() public{}
 }
