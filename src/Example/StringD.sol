@@ -8,9 +8,13 @@
 
 contract Contract {
 
+    // unit constant a = 35;
     bytes32 public msg1 = "Hello World";
     string public msg2 =  "This is a string, longer than 32 bytes";
     constructor() {
-        
+        bool x;
+        assembly {
+          x :=sload(0x1)
+        }
     }
 }
