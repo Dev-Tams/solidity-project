@@ -1,4 +1,5 @@
-  //string data types, stored in double quotes, 
+// SPDX-License-Identifier: UNLICENSED
+//string data types, stored in double quotes, 
 
   //strings for more characters 
 

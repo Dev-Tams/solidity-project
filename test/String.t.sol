@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 import {Test, console} from "forge-std/Test.sol";
 import "../src/Example/StringD.sol";
 
-contract StringD is test{
+contract StringD is Test{
     StringD public stringD;
 
     function setUp() public{
