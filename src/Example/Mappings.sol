@@ -19,4 +19,31 @@ contract Contract {
     {
         members[v] = false; 
     }
+
+  
+  
+	struct User {
+		uint balance;
+		bool isActive;
+	}
+
+	mapping(address => User) public users;
+
+	function createUser() external {
+		require(!users[msg.sender].isActive);
+		users[msg.sender] = User(100, true);
+	}
+
+    function transfer(address v, uint256 amount) external{
+		require(users[msg.sender].isActive);
+		require(users[v].isActive);
+		require(users[msg.sender].balance > amount);
+		users[msg.sender].balance -=amount;
+		users[v].balance +=amount;
+
+
+
+	}
 }
+
+
